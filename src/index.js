@@ -79,21 +79,24 @@ function calcTotalPrice(ids, data, promotion) {
 	
 	var totalPrice = prices.reduce((total, num) => total + num, 0);
 	var totalPriceRegular = pricesRegular.reduce((total, num) => total + num, 0);
+	
 	var discountValue = totalPriceRegular - totalPrice;
+	var discountPercent = (discountValue * 100)/totalPriceRegular;
 
-	return [ totalPrice.toFixed(2), discountValue.toFixed(2) ];
+	return [ totalPrice.toFixed(2), discountValue.toFixed(2), discountPercent.toFixed(2) ];
 }
 
 function getShoppingCart(ids, products) {
 	const prod = formatProduct(ids, products);
 	const promo = calcPromotion(prod);
 	console.log(promo);
-	const [ totalPrice, discountValue ] = calcTotalPrice(ids, products, promo);
+	const [ totalPrice, discountValue, discount ] = calcTotalPrice(ids, products, promo);
 	console.log(totalPrice);
 	console.log(discountValue);
+	console.log(discount);
 	// return {};
 }
 
-const cart = getShoppingCart(ex1, products);
+const cart = getShoppingCart(ex4, products);
 
 module.exports = { getShoppingCart, formatProduct };
