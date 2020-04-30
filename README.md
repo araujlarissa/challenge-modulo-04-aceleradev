@@ -6,7 +6,7 @@
 :computer: :running:  Acelera Dev React  :running: :computer:
 </h3>
 
-## :computer: Descobrir as promoções aplicadas a um carrinho de compras usando NodeJS
+## :triangular_flag_on_post: Descobrir as promoções aplicadas a um carrinho de compras usando NodeJS
 
 O arquivo `src/data/products.json` possui uma lista de **25 produtos** diferentes,
 distribuídos em **4 categorias**:
@@ -28,7 +28,7 @@ As promoções do carrinho serão calculadas de acordo com as seguintes combina�
 
 > Se a combinação de produtos adicionados no carrinho corresponderem a uma das condições acima, o valor dos produtos que serão calculados serão os correspondentes na propriedade **`looks`**.
 
-### Você precisa resolver a seguinte situação:
+### :pencil2: Você precisa resolver a seguinte situação:
 Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo as seguintes proriedades deve ser retornado:
 
  - Os nomes dos produtos e suas respectivas categorias.
@@ -37,7 +37,7 @@ Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo a
  - O total de desconto.
  - A porcentagem de desconto.
 
-#### Exemplo 1:
+#### :round_pushpin: Exemplo 1:
 
 > Dada a **entrada** do seguinte array de produtos (IDs): `[120, 230, 310, 490]`
 >
@@ -69,7 +69,7 @@ Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo a
 }
 ```
 
-#### Exemplo 2:
+#### :round_pushpin: Exemplo 2:
 
 > Dada a **entrada** do seguinte array de produtos (IDs): `[130, 140, 230, 260]`
 >
@@ -101,7 +101,7 @@ Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo a
 }
 ```
 
-#### Exemplo 3:
+#### :round_pushpin: Exemplo 3:
 
 > Dada a **entrada** do seguinte array de produtos (IDs): `[110, 120, 130, 140]`
 >
@@ -133,7 +133,7 @@ Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo a
 }
 ```
 
-#### Example 4:
+#### :round_pushpin: Example 4:
 
 > Dada a **entrada** do seguinte array de produtos (IDs): `[110, 130, 140, 230, 310, 330]`
 >
