@@ -33,11 +33,6 @@ function calcPromotion(products) {
 	const SHOES = products.filter(product => product.category === 'SHOES');
 	const BAGS = products.filter(product => product.category === 'BAGS');
 
-	console.log(TSHIRT.length);
-	console.log(PANTS.length);
-	console.log(SHOES.length);
-	console.log(BAGS.length);
-
 	if (TSHIRT.length === 4 || PANTS.length === 4 || SHOES.length === 4 || BAGS.length === 4) {
 		promotion = 'SINGLE LOOK';
 		return promotion;
@@ -59,10 +54,38 @@ function calcPromotion(products) {
 	}
 }
 
+function calcTotalPrice(ids, data, promotion) {
+	const prices = [];
+	let price = 0;
+
+	ids.map(id => {
+		data.products.map(product => {
+			if (product.id === id) {
+				price = product.regularPrice;
+
+				product.promotions.map(promo => {
+					if (promo.looks.includes(promotion)) {
+						price = promo.price;
+					} 
+				});
+
+				prices.push(price);
+			}
+		});
+	});
+
+	
+	var totalPrice = prices.reduce((total, num) => total + num, 0);
+
+	return totalPrice.toFixed(2);
+}
+
 function getShoppingCart(ids, products) {
 	const prod = formatProduct(ids, products);
 	const promo = calcPromotion(prod);
 	console.log(promo);
+	const totalPrice = calcTotalPrice(ids, products, promo);
+	console.log(totalPrice);
 	// return {};
 }
 
