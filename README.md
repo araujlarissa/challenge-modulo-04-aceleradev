@@ -1,4 +1,12 @@
-# Descobrir as promoções aplicadas a um carrinho de compras usando NodeJS
+<p align="center">
+  <img alt="aceleradevreact" src="./.github/codenation.svg" width="700px"/>
+</p>
+
+<h3 align="center">
+:computer: :running:  Acelera Dev React  :running: :computer:
+</h3>
+
+## :computer: Descobrir as promoções aplicadas a um carrinho de compras usando NodeJS
 
 O arquivo `src/data/products.json` possui uma lista de **25 produtos** diferentes,
 distribuídos em **4 categorias**:
@@ -125,7 +133,7 @@ Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo a
 }
 ```
 
-#### Assertion Example 4:
+#### Example 4:
 
 > Dada a **entrada** do seguinte array de produtos (IDs): `[110, 130, 140, 230, 310, 330]`
 >
@@ -165,18 +173,6 @@ Dada a entrada de um **Array** com os `ids` dos produtos, um `objeto` contendo a
 }
 ```
 
-## Importante:
-> Já existe um arquivo de testes que recebe a função `getShoppingCart`, você pode testar se sua função funciona e retorna corretamente o objeto do carrinho esperado executando o comando `npm run test`.
+---
 
-## Tópicos:
-Neste desafio, você vai praticar os seus conhecimentos em:
-- **Programação Funcional**
-- **Funções puras**
-- **Métodos de Arrays**
-- **Composição de funções**
-
-## Requisitos
-​
-Para este desafio você precisará:
-- NodeJS LTS (8.12.0+)
-- Instale as dependências do projeto através do comando `npm install`.
+Made by :blue_heart: by [Larissa Araújo](https://github.com/arauj0)
