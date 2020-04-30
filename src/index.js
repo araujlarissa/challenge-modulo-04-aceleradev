@@ -56,12 +56,14 @@ function calcPromotion(products) {
 
 function calcTotalPrice(ids, data, promotion) {
 	const prices = [];
+	const pricesRegular = [];
 	let price = 0;
 
 	ids.map(id => {
 		data.products.map(product => {
 			if (product.id === id) {
 				price = product.regularPrice;
+				pricesRegular.push(price);
 
 				product.promotions.map(promo => {
 					if (promo.looks.includes(promotion)) {
@@ -76,16 +78,19 @@ function calcTotalPrice(ids, data, promotion) {
 
 	
 	var totalPrice = prices.reduce((total, num) => total + num, 0);
+	var totalPriceRegular = pricesRegular.reduce((total, num) => total + num, 0);
+	var discountValue = totalPriceRegular - totalPrice;
 
-	return totalPrice.toFixed(2);
+	return [ totalPrice.toFixed(2), discountValue.toFixed(2) ];
 }
 
 function getShoppingCart(ids, products) {
 	const prod = formatProduct(ids, products);
 	const promo = calcPromotion(prod);
 	console.log(promo);
-	const totalPrice = calcTotalPrice(ids, products, promo);
+	const [ totalPrice, discountValue ] = calcTotalPrice(ids, products, promo);
 	console.log(totalPrice);
+	console.log(discountValue);
 	// return {};
 }
 
